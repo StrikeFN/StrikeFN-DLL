@@ -1,16 +1,10 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
 #include <stdio.h>
+#include "util.h"
 
 void Main() {
-    FILE* fptr;
-
-    AllocConsole();
-
-    freopen_s(&fptr, "CONOUT$", "w", stdout);
-    freopen_s(&fptr, "CONOUT$", "w", stderr);
-    freopen_s(&fptr, "CONIN$", "r", stdin);
-
+    Util::Console();
     printf("Initializing StrikeFN...\n\n");
 }
 
